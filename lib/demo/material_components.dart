@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'button_demo.dart';
 import 'floatingActionButton_demo.dart';
 import 'popupMenuButton_demo.dart';
+import 'form_demo.dart';
+import 'checkBox_demo.dart';
 
 class MaterialCompents extends StatelessWidget {
   @override
@@ -13,6 +15,14 @@ class MaterialCompents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'CheckBoxDemo',
+            page: CheckBoxDemo(),
+          ),
+          ListItem(
+            title: 'FormDemo',
+            page: FormDemo(),
+          ),
           ListItem(
             title: 'PopupMenuButtonDemo',
             page: PopupMenuButtonDemo(),
