@@ -17,6 +17,7 @@ class _SliderDemoState extends State<SliderDemo> {
       body: Container(
         padding: EdgeInsets.all(16.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
