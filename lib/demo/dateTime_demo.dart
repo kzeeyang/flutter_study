@@ -11,7 +11,7 @@ class _DateTimeDemoState extends State<DateTimeDemo> {
   DateTime selectedDate = DateTime.now();
   TimeOfDay selectedTime = TimeOfDay.now();
 
-  _selectedDate() async {
+  Future<void> _selectedDate() async {
     final DateTime date = await showDatePicker(
       context: context,
       initialDate: selectedDate,
@@ -28,7 +28,7 @@ class _DateTimeDemoState extends State<DateTimeDemo> {
     });
   }
 
-  _selectedTime() async {
+  Future<void> _selectedTime() async {
     final TimeOfDay time = await showTimePicker(
       context: context,
       initialTime: selectedTime,
