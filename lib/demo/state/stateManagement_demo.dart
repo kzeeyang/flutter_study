@@ -11,7 +11,7 @@ class StateManagementDemo extends StatelessWidget {
         //页面基本属性
         appBar: AppBar(
           //顶部工具栏的显示
-          title: Text('StateMangementDemo'),
+          title: Text('StateManagementDemo'),
           elevation: 0.0,
         ),
         body: CounterWrapper(),
