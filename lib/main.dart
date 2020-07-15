@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/demo/form_demo.dart';
 import 'package:hello_world/demo/hello_demo.dart';
+import 'package:hello_world/demo/rxdart/rxdart_demo.dart';
 import 'package:hello_world/demo/state/stateManagement_demo.dart';
 import 'package:hello_world/demo/stream/stream_demo.dart';
 import 'demo/listview_demo.dart';
@@ -24,7 +25,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),
-      initialRoute: '/stream',
+      initialRoute: '/rxdart',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => MyPage(title: 'About'),
@@ -32,6 +33,7 @@ class App extends StatelessWidget {
         '/mdc': (context) => MaterialCompents(),
         '/state-management': (context) => StateManagementDemo(),
         '/stream': (context) => StreamDemoHome(),
+        '/rxdart': (context) => RxDartDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
