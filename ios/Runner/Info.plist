@@ -41,5 +41,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<array>
+		<string>en</string>
+		<string>zh_CN</string>
+	</array>
 </dict>
 </plist>
