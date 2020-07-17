@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/demo/animation/animation_demo.dart';
 import 'package:hello_world/demo/bloc/bloc_demo.dart';
 import 'package:hello_world/demo/form_demo.dart';
 import 'package:hello_world/demo/hello_demo.dart';
 import 'package:hello_world/demo/http/http_demo.dart';
+import 'package:hello_world/demo/i18n/i18n_demo.dart';
 import 'package:hello_world/demo/rxdart/rxdart_demo.dart';
 import 'package:hello_world/demo/state/stateManagement_demo.dart';
 import 'package:hello_world/demo/stream/stream_demo.dart';
@@ -16,6 +18,7 @@ import 'demo/sliver_demo.dart';
 import 'demo/navigator_demo.dart';
 import 'demo/form_demo.dart';
 import 'demo/material_components.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(App());
@@ -25,9 +28,21 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // locale: Locale('en', 'US'),
+      localeListResolutionCallback: (locales, supportedLocales) {
+        return Locale('en', 'US');
+      },
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate, //提供应用里本地化的字符串
+        GlobalWidgetsLocalizations.delegate, //小部件文字默认的方向
+      ],
+      supportedLocales: [
+        Locale('en', 'US'),
+        Locale('zh', 'CN'),
+      ],
       debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),
-      initialRoute: '/http',
+      initialRoute: '/i18n',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => MyPage(title: 'About'),
@@ -38,6 +53,8 @@ class App extends StatelessWidget {
         '/rxdart': (context) => RxDartDemo(),
         '/bloc': (context) => BlodDemo(),
         '/http': (context) => HttpDemo(),
+        '/animation': (context) => AnimationDemo(),
+        '/i18n': (context) => I18nDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
