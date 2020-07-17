@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// import 'package:hello_world/demo/i18n/map/zeeyang_demo_localizations.dart';
+import 'package:hello_world/demo/i18n/intl/zeeyang_demo_localizations.dart';
 
 class I18nDemo extends StatelessWidget {
   @override
@@ -14,6 +16,11 @@ class I18nDemo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(locale.toString()),
+            Text(
+              // Localizations.of(context, ZeeyangDemoLocalizations).title,
+              ZeeyangDemoLocalizations.of(context).greet('zeeyang'),
+              style: Theme.of(context).textTheme.title,
+            ),
           ],
         ),
       ),

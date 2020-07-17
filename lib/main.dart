@@ -5,6 +5,8 @@ import 'package:hello_world/demo/form_demo.dart';
 import 'package:hello_world/demo/hello_demo.dart';
 import 'package:hello_world/demo/http/http_demo.dart';
 import 'package:hello_world/demo/i18n/i18n_demo.dart';
+// import 'package:hello_world/demo/i18n/map/zeeyang_demo_localizations.dart';
+import 'package:hello_world/demo/i18n/intl/zeeyang_demo_localizations.dart';
 import 'package:hello_world/demo/rxdart/rxdart_demo.dart';
 import 'package:hello_world/demo/state/stateManagement_demo.dart';
 import 'package:hello_world/demo/stream/stream_demo.dart';
@@ -28,11 +30,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // locale: Locale('en', 'US'),
-      localeListResolutionCallback: (locales, supportedLocales) {
-        return Locale('en', 'US');
-      },
+      locale: Locale('en', 'US'),
+      // locale: Locale('zh', 'CN'),
+      // localeListResolutionCallback: (locales, supportedLocales) {
+      //   return Locale('en', 'US');
+      // },
       localizationsDelegates: [
+        ZeeyangDemoLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate, //提供应用里本地化的字符串
         GlobalWidgetsLocalizations.delegate, //小部件文字默认的方向
       ],
