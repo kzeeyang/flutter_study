@@ -39,6 +39,7 @@ dev_dependencies:
     sdk: flutter
   flutter_driver:
     sdk: flutter
+  test: any
   intl_translation: ^0.17.2
 
 # For information on the generic Dart part of this file, see the
