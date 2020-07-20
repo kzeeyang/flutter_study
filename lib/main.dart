@@ -10,6 +10,7 @@ import 'package:hello_world/demo/i18n/intl/zeeyang_demo_localizations.dart';
 import 'package:hello_world/demo/rxdart/rxdart_demo.dart';
 import 'package:hello_world/demo/state/stateManagement_demo.dart';
 import 'package:hello_world/demo/stream/stream_demo.dart';
+import 'package:hello_world/demo/test/test_demo.dart';
 import 'demo/listview_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/bottomNavigationBar_demo.dart';
@@ -46,7 +47,7 @@ class App extends StatelessWidget {
       ],
       debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),
-      initialRoute: '/i18n',
+      initialRoute: '/testDemo',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => MyPage(title: 'About'),
@@ -59,6 +60,7 @@ class App extends StatelessWidget {
         '/http': (context) => HttpDemo(),
         '/animation': (context) => AnimationDemo(),
         '/i18n': (context) => I18nDemo(),
+        '/testDemo': (context) => TestDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
