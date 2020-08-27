@@ -47,7 +47,7 @@ class App extends StatelessWidget {
       ],
       debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),
-      initialRoute: '/testDemo',
+      initialRoute: '/mdc',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => MyPage(title: 'About'),

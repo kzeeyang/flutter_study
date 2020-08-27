@@ -35,13 +35,16 @@ class ListViewDemo extends StatelessWidget {
             child: Material(
               color: Colors.transparent,
               child: InkWell(
-                  splashColor: Colors.white.withOpacity(0.3),
-                  highlightColor: Colors.white.withOpacity(0.1),
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
+                splashColor: Colors.white.withOpacity(0.3),
+                highlightColor: Colors.white.withOpacity(0.1),
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
                       builder: (context) => PostShow(post: posts[index]),
-                    ));
-                  }),
+                    ),
+                  );
+                },
+              ),
             ),
           ),
         ],
